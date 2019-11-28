@@ -1,4 +1,4 @@
-##在Vue框架中使用Vuex
+## 在Vue框架中使用Vuex
 
 ```shell
 #|--store目录
@@ -115,7 +115,7 @@ new Vue({
 
 
 
-##在Nuxt.js中使用Vuex
+## 在Nuxt.js中使用Vuex
 
 ```shell
 #|--store目录
