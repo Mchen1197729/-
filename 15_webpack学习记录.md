@@ -1,17 +1,17 @@
-**webpack学习记录**
-		**1.webpack中四个重要的概念**
+## webpack学习记录 
+>1.webpack中四个重要的概念 
 
-​		**entry,output,loader,plugin**
+>entry,output,loader,plugin 
 
-**entry**:表示程序打包的入口文件
+### entry:表示程序打包的入口文件
 
-**output**:表示打包后生成的文件的配置，有两个属性：filename,path
+### output:表示打包后生成的文件的配置，有两个属性：filename,path
 
-**loader**:webpack本身只能处理js和json文件，如果需要处理其他类型的文件则需要用到对应的loader
+### loader:webpack本身只能处理js和json文件，如果需要处理其他类型的文件则需要用到对应的loader
 
-**plugin**:提供更加强大的功能
+### plugin:提供更加强大的功能
 
-**起步：**
+## 起步：
 
 ```shell
 #安装依赖
@@ -57,8 +57,7 @@ module.exports = {
 #会在当前文件夹下生成一个dist目录,里面有一个文件bundle.js,在index.html中将该文件引入即可。
 ```
 
-**管理资源：**
-
+## 管理资源： 
 ```shell
 #加载css文件
 npm install --save-dev style-loader
@@ -72,7 +71,6 @@ webpack-demo
 	  |- index.css #新增
 	|-webpack.config.js	
 ```
-
 ```js
 //修改webpack.config.js文件
 //webpack.config.js

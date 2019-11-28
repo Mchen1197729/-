@@ -1,8 +1,8 @@
-##将页面中指定的DOM结构以图片的形式保存到本地
+## 将页面中指定的DOM结构以图片的形式保存到本地
 
-####相关的库：html2canvas、download.js
+#### 相关的库：html2canvas、download.js
 
-####思路：先利用html2canvas将指定的DOM结构生成canvas,再利用download.js将canvas中的内容保存到本地。
+#### 思路：先利用html2canvas将指定的DOM结构生成canvas,再利用download.js将canvas中的内容保存到本地。
 
 ```html
 <!doctype html>

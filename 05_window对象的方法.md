@@ -1,4 +1,4 @@
-##window对象的方法
+## window对象的方法
 
 ```js
 //1.window.alert('要提示的内容');
