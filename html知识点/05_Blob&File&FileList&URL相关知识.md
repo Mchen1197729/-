@@ -61,10 +61,13 @@
   encodeURI()、decodeURI()、encodeURIComponent()、decodeURIComponent()
   
   
-  1.encodeURI() 只编码url中的特殊字符(中文等)
-  2.decodeURI() 是encodeURI()的逆过程
-  3.encodeURIComponent() 会将整个url都编码(包括// :之类的网页url合法的字符)
-  4.decodeURIComponent() encodeURIComponent()的逆过程
+  ###### 1.encodeURI() 只编码url中的特殊字符(中文等)
+  
+  ###### 2.decodeURI() 是encodeURI()的逆过程
+  
+  ###### 3.encodeURIComponent() 会将整个url都编码(包括// :之类的网页url合法的字符)
+  
+  ###### 4.decodeURIComponent() encodeURIComponent()的逆过程
   
                 
 
