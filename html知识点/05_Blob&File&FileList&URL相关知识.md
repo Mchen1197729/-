@@ -37,9 +37,13 @@
       reader.onload = function(e){
         console.log(e.target.result);
       };
+      //一般用来读取文本文件的信息,得到文本的字符串
       reader.readAsText(Blob对象或者File对象);
-      reader.readAsDataURL(Blob对象或者File对象);
+      
       //一般用来读取图片的信息,得到base64格式的字符串,可以直接用于img标签的src属性
+      reader.readAsDataURL(Blob对象或者File对象);
+      
+      //读取得到二进制对象
       reader.readAsArrayBuffer(Blob对象或者File对象);
 #### URL对象用于将Blob对象或者File对象生成可访问的blob:链接,可以直接用于img标签的src属性
       静态方法:URL.createURLObject(File对象或者Blob对象)
