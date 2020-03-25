@@ -1,12 +1,12 @@
 ### ArrayBuffer对象&Blob对象&File对象&FileList对象&FileReader对象&URL对象
 
 #### 1.ArrayBuffer对象用于操作二进制内存
-      let buffer = new ArrayBuffer(length:number);
+  >   let buffer = new ArrayBuffer(length:number);
       接受一个整数作为参数,表示该二进制对象所占内存的大小
       实例对象有slice实例方法,可以用来复制对象的一部分或者全部
 
 #### 2.Blob对象用于操作二进制文件
-      let blob = new Blob(arr[,options]);
+  >   let blob = new Blob(arr[,options]);
       第一个参数是一个数组,数组的成员是字符串或者二进制对象
       第二个参数是可选的配置对象,目前只有一个属性type,对应的值是一个字符串,表示对象的MIME类型,默认是空字符串
       let arr = ['chenMM', 'liR'];
@@ -17,16 +17,10 @@
       
 #### 3.File对象表示一个文件对象
 
+#### 4.FileList对象是一组File对象(伪数组)   
 
-
-
-#### 4.FIleList对象是一组File对象(伪数组)  
-
-  
-  
-  
-#### FileReader对象用于读取File对象或者Blob对象的内容
-      FileReader对象的几个监听函数
+#### 5.FileReader对象用于读取File对象或者Blob对象的内容
+  >   FileReader对象的几个监听函数
       1.reader.onload  读取成功,通常在该回调函数中获取e.target.result属性(文件的内容)
       2.reader.onerror 读取失败
       3.reader.onabort 读取中止
@@ -39,20 +33,18 @@
       };
       //一般用来读取文本文件的信息,得到文本的字符串
       reader.readAsText(Blob对象或者File对象);
-      
       //一般用来读取图片的信息,得到base64格式的字符串,可以直接用于img标签的src属性
       reader.readAsDataURL(Blob对象或者File对象);
-      
       //读取得到二进制对象
-      reader.readAsArrayBuffer(Blob对象或者File对象);
+      reader.readAsArrayBuffer(Blob对象或者File对象);     
 #### URL对象用于将Blob对象或者File对象生成可访问的blob:链接,可以直接用于img标签的src属性
-      静态方法:URL.createURLObject(File对象或者Blob对象)
+  >   静态方法:URL.createURLObject(File对象或者Blob对象)
               URL.revokeURLObject(URL实例) 用于手动释放生成的URL实例
               如果生成的URL对象实例很多,使用完该资源后需要手动释放资源
               如果生成的URL对象实例不是很多,可以不用手动释放资源
               
 
-##URL编码与解码
+### URL编码与解码
   >原因：网页中的URL只能包含合法的字符,不合法的字符都会被按照一定规则进行转义              
   合法字符包含两类：
   1.URL元字符：   ;  ,  /  ?  :  @  #  =  +  $  &
