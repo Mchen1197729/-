@@ -20,7 +20,7 @@ let dataStr = JSON.stringify(data,(key,value)=>{
     case 'married':
       return undefined;   //return undefined说明要跳过该属性的序列化
     default:
-      return value;
+      return value; //必须要将value返回才能有值
      }
 });
 //dataStr:{'name':'林志玲林志玲','age':39}
@@ -30,7 +30,8 @@ let dataStr2 = JSON.stringify(data,['name','age']); //只序列化name和age属�
 ```
 
 ```js
-//第三个参数(传入一个数字,用来指定序列化后的字符串的缩进格式)
+//第三个参数(传入一个数字,用来指定序列化后的字符串的缩进格式,也可以传入一个字符串,用来指定分隔符)
+//如果传入的是数字 那么数字最多是10 多了无效
 let data = {name:'林志玲',age:49,married:true};
 let dataStr = JSON.stringify(data,null,2);
 /*
@@ -39,6 +40,15 @@ dataStr:
 	'name':'林志玲',
 	'age':49,
 	'married':true
+}
+*/
+//如果传入字符串 那么字符串的长度最多10位 多余的无效
+let dataStr2 = JSON.stringify(data,null,'|-');
+/*
+{
+|-'name':'林志玲',
+|-'age':49,
+|-'married':true
 }
 */
 ```
@@ -70,9 +80,12 @@ let obj = {
   name:'林志玲',
   age:49,
   toJSON(){
-    return 12345
+    return {
+      name:'波多野结衣',
+      married:false
+    }
   }
 };
-let objStr = JSON.stringify(obj); // 结果:12345
+let objStr = JSON.stringify(obj); // 结果:{"name":"波多野结衣","married":false}
 ```
 
